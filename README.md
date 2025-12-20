@@ -84,10 +84,10 @@ RAISA is designed to support the following human-aware navigation behaviors:
 
 ```mermaid
 graph TD
-    A[Sensors / Perception Nodes] --> B(ROS Topics)
+    A[Sensors / Perception Nodes / UI] --> B(ROS Topics)
     B --> C[Master Node]
     C --> D[Communication Node]
-    D --> E[Navigation / Motion / UI]
+    D --> E[Navigation / Motion]
 ````
 
 ---
