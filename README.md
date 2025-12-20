@@ -87,7 +87,7 @@ graph TD
     A[Sensors / Perception Nodes] --> B(ROS Topics)
     B --> C[Master Node]
     C --> D[Communication Node]
-    E --> F[Navigation / Motion / UI]
+    D --> E[Navigation / Motion / UI]
 ````
 
 ---
