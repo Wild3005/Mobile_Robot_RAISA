@@ -86,7 +86,8 @@ RAISA is designed to support the following human-aware navigation behaviors:
 graph TD
     A[Sensors / Perception Nodes] --> B(ROS Topics)
     B --> C[Master Node]
-    C --> D[Navigation / Motion / UI]
+    C --> D[Communication Node]
+    E --> F[Navigation / Motion / UI]
 ````
 
 ---
