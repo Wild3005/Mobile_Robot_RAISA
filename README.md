@@ -1,5 +1,21 @@
 # RAISA Humanoid – Physically-Aware Social Navigation
 
+## System Architecture & Sequence Diagram
+
+### High-Level Architecture Diagram
+
+
+![RAISA System Architecture](images/Arsitektur_Sistem.jpeg)
+
+*The diagram above shows the main architecture of the RAISA system, including the interaction between humans (with UWB sensors and Chairless Chair), the RAISA robot (with sensors and ROS2), and communication with the Web UI and terminal via laptop. Sensor data and UI commands are processed by the master and communication nodes, then forwarded to the robot base for navigation execution.*
+
+### Sequence Diagram
+
+
+![RAISA Sequence Diagram](images/Sequence_Diagram.jpeg)
+
+*The sequence diagram above illustrates the flow of data and commands from the Web UI and sensors to the master node, then to the communication layer, and finally resulting in navigation commands to the robot base and status feedback to the UI. Each layer has specific responsibilities, starting from sensor input, data processing, status publishing, to communication and feedback.*
+
 ## Concept Overview
 
 Traditional social navigation focuses primarily on collision avoidance.  
@@ -171,6 +187,42 @@ return LaunchDescription(
     ]
 )
 ```
+---
+
+## Demonstration & Implementation Videos
+To provide a clearer understanding of the system behavior and practical usage, the following videos demonstrate both real-world robot execution and system implementation based on this README.
+
+---
+
+### 1. Experimental Case Demonstration (Robot Navigation Behavior)
+
+This video shows the RAISA humanoid robot executing navigation behaviors according to predefined social navigation cases, such as yielding, stopping, passing, and human-aware motion adjustment.
+
+The robot dynamically adapts its navigation behavior based on:
+
+- Human position (UWB-based localization)
+- Human leg posture (dual-leg sensing)
+- FSM-driven decision logic
+
+**Case-based robot navigation video:**
+https://drive.google.com/file/d/1Ic5Uo1yaQziAyUpEWViwiEDSb8c0K91M/view
+
+---
+
+### 2. System Implementation & Usage Tutorial (README Implementation)
+
+This video demonstrates the practical implementation of this README, serving as a step-by-step reference for:
+
+- Workspace setup
+- Dependency installation
+- Build and launch process
+- System execution on the real robot
+- Web UI usage and mode switching
+
+This video effectively acts as a visual tutorial for deploying and running the RAISA system as documented.
+
+**System implementation & usage video:**
+https://drive.google.com/file/d/1YzLL0rAVylsV_j_v7QWwgvqDkDzE7iqa/view?usp=sharing
 
 ---
 
